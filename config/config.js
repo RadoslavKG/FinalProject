@@ -1,6 +1,3 @@
-/**
- * Created by 1 on 15.12.2016 г..
- */
 const path = require('path');
 
 module.exports = {
@@ -10,3 +7,6 @@ module.exports = {
     },
     production:{}
 };
+
+
+
