@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <p align="center" style="color:white;"><b>18 December 2016</b></p>
-</head>
-<body>
-<!-- Youtube videos -->
-<div align="center">
-    <embed width="330" height="250" src="https://www.youtube.com/v/OTknzTQlDgc">
-        <embed width="330" height="250" src="https://www.youtube.com/v/YvwlD1T_f4g">
-            <embed width="330" height="250" src="https://www.youtube.com/v/IGIPQSPoXIY">
-                <embed width="330" height="250" src="https://www.youtube.com/v/e6n0Ie8lqMU">
-                    <embed width="330" height="250" src="https://www.youtube.com/v/CTjChitiJSg">
+<div class="container body-content">
+    <div class="row">
+        {{#each articles}}
+            <div class="col-md-6">
+                <article>
+                    <header>
+                        <h2>{{this.title}}</h2>
+                    </header>
+
+                    <p>{{this.content}}
+                    </p>
+
+                    <small class="author">
+                        {{this.author.fullName}}
+                    </small>
+
+                    <footer>
+                        <div class="pull-right">
+                            <a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Read more &raquo;</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        {{/each}}
+    </div>
 </div>
-
-
-</body>
-</html>

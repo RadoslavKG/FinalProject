@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Highlight Buzz</title>
+    <title>BuzzerBeater</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/javascripts/jquery-1.10.2.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
@@ -11,7 +11,7 @@
         <div class="navbar navbar-default navbar-fixed-top text-uppercase">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="/" class="navbar-brand">Highlight Buzz</a>
+                    <a href="/" class="navbar-brand">BuzzerBeater</a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -21,6 +21,17 @@
                 {{#if user}}
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
+                            {{#if isAdmin}}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                       role="button" aria-expanded="false">Admin<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/admin/user/all">Users</a></li>
+                                        <li><a href="/admin/category/all">Categories</a></li>
+                                    </ul>
+                                </li>
+                            {{/if}}
                             <li><a href="/user/details">Welcome({{user.email}})</a></li>
                             <li><a href="/article/create">New Article</a></li>
                             <li><a href="/user/logout">Logout</a></li>
@@ -38,7 +49,6 @@
             </div>
         </div>
     </header>
-
     {{#if error }}
         <h2>{{error}}</h2>
     {{/if}}
@@ -46,7 +56,7 @@
 </body>
 <footer>
     <div class="container modal-footer">
-        <p style="color: white">&copy; RadoslavKG</p>
+        <p>&copy; MJ assoc.</p>
     </div>
 </footer>
 </html>

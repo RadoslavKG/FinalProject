@@ -12,10 +12,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/* Background image */
-body{
-  background-image: url(ipQZEak.jpg);
-  background-size:cover, 100%;
+
+body {
+  background-image: url(basketball-floor.jpg);
+  background-size: cover, 100%;
 }
 body {
     padding-top: 70px;
@@ -41,6 +41,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
 
 html {
   font-family: sans-serif;
